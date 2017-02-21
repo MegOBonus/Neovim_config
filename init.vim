@@ -121,7 +121,10 @@ let g:airline#extensions#branch#enabled = 1
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 
-"************YouCompleteMe and UltiSnips compatibility, with the helper of supertab
+let g:gitgutter_sign_added = 'Ⓐ '
+let g:gitgutter_sign_modified = 'Ⓜ '
+let g:gitgutter_sign_removed = 'Ⓓ '
+
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 
@@ -142,7 +145,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
+    let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers['typescript'] = ['.']
 
@@ -177,7 +180,7 @@ autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
 if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
+    let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers['typescript'] = ['.']
 
@@ -191,21 +194,17 @@ set rtp+=<your_path_here>/typescript-tools.vim/
 
 "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HOTKEYS %%%%%%%%%%%%%%%%%
 
-nmap <F8> :TagbarToggle<CR>
-
 noremap <F3> :Autoformat<CR>
+nnoremap <F4> :CtrlPSmartTabs<CR>
+nmap <F5> <Plug>NumberCycle
+nmap <F8> :TagbarToggle<CR>
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-nmap <leader># <Plug>NumberCycle
-
-nmap <Leader>l <Plug>(Limelight)
-xmap <Leader>l <Plug>(Limelight)
-
-nnoremap <F3> :CtrlPSmartTabs<CR>
+nmap <silent> <C-n> :tabnew <bar> :Startify <CR>
 "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STARTED SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%
 
 set nocompatible
