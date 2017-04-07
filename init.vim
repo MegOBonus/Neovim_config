@@ -2,46 +2,67 @@
 
 call plug#begin('~/.local/share/nvim/plugged')
 "Plugins for install must be here
+"____________________________________________________________________
 
-"/// Plugin for started page
+"This plugin provides a start screen for Vim and Neovim.
 Plug 'mhinz/vim-startify'
+"____________________________________________________________________
 
-"/// Plugin for multicomments
+"Comment functions so powerful—no comment necessary.
 Plug 'scrooloose/nerdcommenter'
+"____________________________________________________________________
 
-"/// Filestyle
-Plug 'aserebryakov/filestyle'
-
-"/// Plugin for git
-Plug 'mhinz/vim-signify'
+"A Vim plugin which shows a git diff in the 'gutter' (sign column). It
+"shows whether each line has been added, modified, and where lines have
+"been removed. You can also stage and undo individual hunks.
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
+"____________________________________________________________________
 
-"/// Plugin for line with short information about project
+"Lean & mean status/tabline for vim that's light as air.
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"____________________________________________________________________
 
-"/// Plugin for nubers
+"Allows for easy cycling between line numbering modes.
 Plug 'jcorbin/vim-number-cycle'
+"____________________________________________________________________
 
-"/// Plugin for file finds
+"Underlines the word under the cursor
+Plug 'itchyny/vim-cursorword'
+"____________________________________________________________________
+"Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Plug 'ctrlpvim/ctrlp.vim'
+"Vim CtrlP plugin to switch between opened tabs.
 Plug 'davidegx/ctrlp-smarttabs'
+"____________________________________________________________________
 
-"/// Plugin for tags
+"Tagbar is a Vim plugin that provides an easy way to browse the tags of the
+"current file and get an overview of its structure. It does this by creating a
+"sidebar that displays the ctags-generated tags of the current file, ordered
+"by their scope. This means that for example methods in C++ are displayed
+"under the class they are defined in.
 Plug 'majutsushi/tagbar'
+"____________________________________________________________________
 
-"/// Plugin for colorshemes
+" Plugin for colorshemes
 Plug 'flazz/vim-colorschemes'
+"____________________________________________________________________
 
-"/// Plugin for beautiful tabs
+"Lightweight Vim plugin to enhance the tabline including numbered tab page
+"labels; it's written entirely in Vim script.
 Plug  'webdevel/tabulous'
+"____________________________________________________________________
 
-"/// vimproc is a great asynchronous execution library
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-
-"/// Plugin for icons
+"VimDevIcons adds filetype glyphs (icons) to other plugins such as NERDTree,
+"vim-airline, CtrlP, powerline, unite, lightline.vim, vim-startify, vimfiler,
+"and flagship."/// Plugin for icons
 Plug 'ryanoasis/vim-devicons'
+"____________________________________________________________________
+
+Plug 'w0rp/ale'
+Plug 'joonty/vdebug'
+Plug 'maksimr/vim-translator'
+Plug 'exVim'
 
 "/// Plugins for snippets and autocomplete
 Plug 'honza/vim-snippets'
@@ -72,6 +93,8 @@ Plug 'othree/html5.vim'
 Plug 'c9s/perlomni.vim'
 Plug 'wolfgangmehner/perl-support'
 Plug 'Chiel92/vim-autoformat'
+Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
+
 "######## TypeScript
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
@@ -89,7 +112,7 @@ endif
 
 "************Airline
 
-let g:airline_theme='luna'
+let g:airline_theme='onedark'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
