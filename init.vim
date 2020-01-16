@@ -67,11 +67,7 @@ Plug 'w0rp/ale'
 "Format code with one button press.
 Plug 'Chiel92/vim-autoformat'
 "____________________________________________________________________
-
-"YouCompleteMe is a fast, as-you-type, fuzzy-search code completion 
-"engine for Vim.
-Plug 'Valloric/YouCompleteMe'
-"____________________________________________________________________
+"
 "Supertab is a vim plugin which allows you to use <Tab> for all your
 "insert completion needs (:help ins-completion).
 Plug 'ervandew/supertab'
