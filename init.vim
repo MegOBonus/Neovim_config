@@ -63,20 +63,7 @@ Plug 'ryanoasis/vim-devicons'
 "in NeoVim and Vim 8 while you edit your text files.
 Plug 'w0rp/ale'
 "____________________________________________________________________
-
-"Vdebud is a new, fast, powerful debugger client for Vim. It's
-"multi-language, and has been tested with PHP, Python, Ruby, Perl,
-"Tcl and NodeJS. It interfaces with any debugger that faithfully uses
-"the DBGP protocol, such as Xdebug for PHP.
-Plug 'joonty/vdebug'
-"____________________________________________________________________
-
-"This script allows you to translate text using the google online 
-"translator. You can translate as single words and whole blocks using
-"visual-mode.
-Plug 'maksimr/vim-translator'
-"____________________________________________________________________
-
+"
 "Format code with one button press.
 Plug 'Chiel92/vim-autoformat'
 "____________________________________________________________________
@@ -98,20 +85,7 @@ Plug 'SirVer/ultisnips'
 "A collection of language packs for Vim.
 Plug 'sheerun/vim-polyglot'
 "____________________________________________________________________
-
-"jedi-vim - awesome Python autocompletion with VIM
-Plug 'davidhalter/jedi-vim'
-"____________________________________________________________________
-
-"Perl-completion plugin supports basic perl completion and
-"Moose /DBIx::Class completion.
-Plug 'c9s/perlomni.vim'
-"____________________________________________________________________
-
-"Perl Support implements a Perl-IDE for Vim/gVim.
-Plug 'wolfgangmehner/perl-support'
-"____________________________________________________________________
-
+"
 call plug#end()
 
 "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PLUGIN CONFIGURATIONS %%%%%%%%%%%%%%%%%
